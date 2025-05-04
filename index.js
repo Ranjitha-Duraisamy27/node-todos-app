@@ -5,7 +5,7 @@ const app = express();
 const mongoURL = process.env.MONGO_URL || 'mongodb://localhost:27017/todoapp';
 mongoose.connect(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true });
 
-const Todo = mongoose.model('Todo', { task: String });
+const Todo = mongoose.model('todos', { task: String });
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
